@@ -12,10 +12,10 @@ class Offer(models.Model):
     description = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
 
-def publish(self):
+    def publish(self):
         self.published_date = timezone.now()
         self.save()
 
-def __str__(self):
-        return self.title
-    
+    def __unicode__(self):
+        return self.title  # What you want to show
+   
