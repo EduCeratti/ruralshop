@@ -1,28 +1,13 @@
-{% load staticfiles %}
-<html>
-<title>Rural Shop - Facilitador de transações rurais</title>
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{% static 'css/offer.css' %}">
-<div>
-    <h1><a href="/">Rural Shop - Ofertas</a></h1>
-</div>
+{% extends 'offer/base.html' %}
 
-<div class="content container">
-    <div class="row">
-        <div class="col-md-8">
-            {% for offer in offers %}
-                <div class="offer">
-                    <div class="date">
-                        {{ offer.created_date }}
-                    </div>
-                    <h1><a href="">{{ offer.title }}</a></h1>
-                    <p>{{ offer.description|linebreaksbr }}</p>
-                </div>
-            {% endfor %}
+{% block content %}
+    {% for offer in offers %}
+        <div class="offer">
+            <div class="date">
+                {{ offer.created_date }}
+            </div>
+            <h1><a href="">{{ offer.title }}</a></h1>
+            <p>{{ offer.description|linebreaksbr }}</p>
         </div>
-    </div>
-</div>
-
-</html>
+    {% endfor %}
+{% endblock content %}
