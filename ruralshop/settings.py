@@ -127,9 +127,12 @@ else:
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'pt-br'
+
+#TIME_ZONE = 'America/SaoPaulo'
+
 
 USE_I18N = True
 

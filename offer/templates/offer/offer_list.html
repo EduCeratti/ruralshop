@@ -1,12 +1,26 @@
 {% extends 'offer/base.html' %}
 
+
+<form type="get" action="." style="margin: 0">
+    <input  id="search_box" type="text" name="search_box"  placeholder="Search..." >
+    <button id="search_submit" type="submit" >Submit</button>
+</form>
+
 {% block content %}
+
+<form type="get" action="." style="margin: 0">
+    <input  id="search_box" type="text" name="search_box"  placeholder="Search..." >
+    <button id="search_submit" type="submit" >Buscar</button>
+</form>
+<br>
+<br>
+
     {% for offer in offers %}
         <div class="offer">
+            <h1><a href=""> {{ offer.title }} </a></h1>
             <div class="date">
                 {{ offer.created_date }}
             </div>
-            <h1><a href="">{{ offer.title }}</a></h1>
             <p>{{ offer.description|linebreaksbr }}</p>
         </div>
     {% endfor %}
