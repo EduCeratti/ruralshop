@@ -118,8 +118,8 @@ else:
             'HOST': '127.0.0.1',
             'PORT': '3306',
             'NAME': 'ruraldb',
-            'USER': 'user_rural',
-            'PASSWORD': 'user_rural',
+            'USER': 'root',
+            'PASSWORD': 'root',
         }
     }
 # [END db_setup]
