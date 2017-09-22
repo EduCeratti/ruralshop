@@ -1,0 +1,11 @@
+{% extends 'offer/base.html' %}
+
+{% block content %}
+	<div class="offer">
+		<div class="date">
+		    {{ offer.created_date }}
+		</div>
+		<h1><a href="">{{ offer.title }}</a></h1>
+		<p>{{ offer.description|linebreaksbr }}</p>
+	</div>
+{% endblock %}

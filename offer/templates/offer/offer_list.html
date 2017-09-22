@@ -17,7 +17,7 @@
 
     {% for offer in offers %}
         <div class="offer">
-            <h1><a href=""> {{ offer.title }} </a></h1>
+	    <h1><a href="{% url 'offer_detail' pk=offer.pk %}">{{ offer.title }}</a></h1>
             <div class="date">
                 {{ offer.created_date }}
             </div>
