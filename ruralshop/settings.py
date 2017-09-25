@@ -68,6 +68,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+LOGIN_URL="/login/"
+LOGOUT_URL="/logout/"
+LOGIN_REDIRECT_URL="/"
+
 ROOT_URLCONF = 'ruralshop.urls'
 
 TEMPLATES = [

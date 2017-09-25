@@ -5,6 +5,7 @@
 		<div class="date">
 		    {{ offer.created_date }}
 		</div>
+		<a class="btn btn-default" href="{% url 'offer_edit' pk=offer.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 		<h1><a href="">{{ offer.title }}</a></h1>
 		<p>{{ offer.description|linebreaksbr }}</p>
 	</div>
